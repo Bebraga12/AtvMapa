@@ -34,6 +34,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     //cria a linha --> mMap.addPolyline(new PolylineOptions().add(LatLng, LatLng));
 
     //marcador de endreço --> mMap.addMarker(new MarkerOptions().position(origin).title("Origem"));
+
+    // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng, 5));
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -45,6 +47,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(fim).title("fim"));
 
         mMap.addPolyline(new PolylineOptions().add(inicio, fim));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(inicio, 5));
 
     }
 }
