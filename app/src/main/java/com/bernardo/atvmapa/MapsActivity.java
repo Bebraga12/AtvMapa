@@ -12,7 +12,11 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.bernardo.atvmapa.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.model.PolylineOptions;
-
+import com.google.android.gms.maps.model.RoundCap;
+import com.google.android.gms.maps.model.JointType;
+import com.google.android.gms.maps.model.Dot;
+import com.google.android.gms.maps.model.Gap;
+import java.util.Arrays;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -46,9 +50,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(inicio).title("Inicio"));
         mMap.addMarker(new MarkerOptions().position(fim).title("fim"));
 
-        mMap.addPolyline(new PolylineOptions().add(inicio, fim));
+        mMap.addPolyline(new PolylineOptions()
+                .add(inicio, fim)
+
+
+        );
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(inicio, 5));
+
 
     }
 }
