@@ -18,4 +18,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
+
+    public void onClickConfig(View view) {
+        Intent intent = new Intent(this, ConfigActvity.class);
+        startActivity(intent);
+    }
 }
+
