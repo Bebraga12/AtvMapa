@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AtvMapa</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="inicio_key">chave_inicio</string>
+    <string name="fim_key">chave_fim</string>
+
 </resources>
